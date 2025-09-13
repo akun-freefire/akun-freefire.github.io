@@ -1,0 +1,89 @@
+:root{
+  --bg:#f3f6fb;
+  --card:#ffffff;
+  --accent:#3b82f6;
+  --accent-2:#06b6d4;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --success:#10b981;
+  --radius:12px;
+  font-family: Inter, Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--bg),#e9f0ff 70%);
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.container{
+  width:100%;
+  max-width:420px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(15,23,42,0.08);
+  padding:28px;
+}
+
+.title{
+  margin:0 0 14px 0;
+  font-size:22px;
+  letter-spacing:0.2px;
+}
+
+.form label{
+  display:block;
+  margin-top:12px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.form input{
+  width:100%;
+  padding:12px 14px;
+  margin-top:6px;
+  border:1px solid #e6eefc;
+  border-radius:10px;
+  font-size:15px;
+  outline:none;
+  transition:box-shadow .15s, border-color .15s;
+}
+.form input:focus{
+  border-color:var(--accent);
+  box-shadow:0 6px 18px rgba(59,130,246,0.12);
+}
+
+.btn{
+  margin-top:18px;
+  width:100%;
+  padding:12px 14px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:white;
+  border:none;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  font-size:15px;
+  box-shadow:0 8px 18px rgba(59,130,246,0.18);
+}
+.btn:active{transform:translateY(1px)}
+
+.note{
+  margin-top:12px;
+  font-size:13px;
+  color:var(--muted);
+  text-align:center;
+}
+
+/* Success page tweak */
+.success-card{
+  text-align
